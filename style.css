@@ -86,7 +86,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('Imagens/fundo-img.png');
+    background-image: url('Imagens/Fundo.png');
     background-size: cover;
     background-attachment: fixed;
     opacity: 0;
