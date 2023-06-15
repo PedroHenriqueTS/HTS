@@ -64,9 +64,8 @@ const typed = new Typed('.multiplo-texto', {
 /*-------------------------SEND MESSAGE WITH TELEGRAM ----------------------------*/
 // Função para enviar a mensagem para o canal do Telegram
 async function enviarMensagemTelegram(mensagem) {
-   const token = '6063001127:AAFUIYm7NvEiMo59Q0TzU2t6ZoFmspHn8BY'; // Substitua pelo seu token do bot do Telegram
-  const chatId = '6042061963'; // Substitua pelo ID do canal
-
+   const token = '6063001127:AAFUIYm7NvEiMo59Q0TzU2t6ZoFmspHn8BY'; //  Token do bot do Telegram
+  const chatId = '6042061963'; // ID do canal
 
   try {
     const response = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
@@ -116,6 +115,14 @@ function enviarFormulario(event) {
 
   // Envia a mensagem para o Telegram
   enviarMensagemTelegram(mensagemTelegram);
+
+  const whattsappUrl = 'https://wa.me/5563992485865';
+
+  const mensagemCod = encodeURIComponent(mensagemTelegram);
+
+  const urlCompleta = `${whattsappUrl}?text=${mensagemCod}`;
+
+  window.open(urlCompleta, '_blank');
 }
 
 // Adiciona um listener de evento para o envio do formulário
